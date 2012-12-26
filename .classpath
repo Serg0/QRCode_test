@@ -6,5 +6,8 @@
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
 	<classpathentry kind="lib" path="D:/Downloads/serg/java_workspace_geekhub/QRcode_test/libs/android-support-v4.jar"/>
 	<classpathentry kind="lib" path="D:/Downloads/serg/ZXing-2.1/zxing-2.1/core/core.jar"/>
+	<classpathentry kind="lib" path="D:/Downloads/serg/Gitlab_rep/presentain/presentain-android/libs/zxing.jar"/>
+	<classpathentry exported="true" kind="src" path="/CaptureActivity"/>
+	<classpathentry exported="true" kind="lib" path="D:/Downloads/serg/ZXing-2.1/zxing-2.1/android/bin/captureactivity.jar" sourcepath="/CaptureActivity/src"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

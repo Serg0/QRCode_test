@@ -62,13 +62,20 @@ public class MainActivity extends Activity {
 		if (requestCode == 0) {
 			if (resultCode == RESULT_OK) {
 				String contents = intent.getStringExtra("SCAN_RESULT");
-				Toast.makeText(this, contents, Toast.LENGTH_LONG).show();
-				scanQRcodeResult.setText(contents);
-			
-				Tiket tiket = referenceParser.parcer(contents);
-//				if (tiket != null){
-				scanQRcodeResult.append("\nGame ID is "+tiket.getGameID()+"\n "+"Tiket ID is "+ tiket.getTiketID());
-//				}
+				// String contents2 = intent.hasExtra("ENTER_CODE_MANUALLY");
+				if (intent.hasExtra("ENTER_CODE_MANUALLY")) {
+					Toast.makeText(this, "Enter code manually",
+							Toast.LENGTH_LONG).show();
+				} else {
+					Toast.makeText(this, contents, Toast.LENGTH_LONG).show();
+					scanQRcodeResult.setText(contents);
+
+					Tiket tiket = referenceParser.parcer(contents);
+					// if (tiket != null){
+					scanQRcodeResult.append("\nGame ID is " + tiket.getGameID()
+							+ "\n " + "Tiket ID is " + tiket.getTiketID());
+				}
+				// }
 			}
 		}
 	}
